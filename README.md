@@ -5,9 +5,9 @@ A script that generates html and images from a ROOT file of TCanvases.
 
 authors:
 
-    -   Ryan Reece <ryan.reece@cern.ch>
-    -   Tae Min Hong <tae.min.hong@cern.ch>
-    -   Alex Tuna <tuna@cern.ch>
+-   Ryan Reece <ryan.reece@cern.ch>
+-   Tae Min Hong <tae.min.hong@cern.ch>
+-   Alex Tuna <tuna@cern.ch>
 
 created: February 16, 2011
 
@@ -37,5 +37,5 @@ Installation
 Assuming you have a working ROOT installation with PyROOT, the only other
 requirement is that you download the highslide javascript library at
 <http://highslide.com/>, unzip it, and set the highslide_path variable to
-point to the path: highslide-(version)/highslide (see below).
+point to the path: highslide-(version)/highslide (see the `root2html.py` file).
 
