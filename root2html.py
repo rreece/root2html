@@ -44,8 +44,8 @@ AUTHORS
     Tae Min Hong  <tmhong@cern.ch>
     Alex Tuna  <tuna@cern.ch>
 
-COPYRIGHT
-    Copyright 2011-2014 The authors
+LICENSE
+    Copyright 2011-2015 The authors
     License: GPL <http://www.gnu.org/licenses/gpl.html>
 
 SEE ALSO

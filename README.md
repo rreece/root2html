@@ -39,3 +39,11 @@ requirement is that you download the highslide javascript library at
 <http://highslide.com/>, unzip it, and set the highslide_path variable to
 point to the path: highslide-(version)/highslide (see the `root2html.py` file).
 
+
+License
+----------------------------------
+
+-   Copyright 2011-2015 The authors
+-   License: GPL <http://www.gnu.org/licenses/gpl.html>
+
+
