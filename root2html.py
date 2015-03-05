@@ -42,6 +42,7 @@ OPTIONS
 AUTHORS
     Ryan Reece  <ryan.reece@cern.ch>
     Tae Min Hong  <tmhong@cern.ch>
+    Alex Tuna  <tuna@cern.ch>
 
 COPYRIGHT
     Copyright 2011-2014 The authors
