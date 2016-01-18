@@ -73,7 +73,7 @@ ROOT.gErrorIgnoreLevel = 1001
 
 ## global options
 highslide_path = '../../highslide-4.1.9/highslide'
-img_format = 'gif'
+img_format = 'gif' # gif or png
 img_height = 450 # pixels
 thumb_height = 120 # pixels
 quiet = True
@@ -101,6 +101,8 @@ def main(argv):
             pattern = val
         if opt in ('-j', '--highslide'):
             highslide_path = val
+
+    print '  root2html.py  ----------------------------------------------------'
 
     assert len(args) > 0
 
@@ -577,7 +579,8 @@ def convert_eps_to_gif(eps):
     name = eps[:-3] + 'gif'
 #    os.system('convert -resize x%i -antialias -colors 64 -format gif %s %s' % (img_height, eps, name) )
 #    os.system('convert -size x%i -format gif %s %s' % (img_height, eps, name) )
-    os.system('convert -format gif %s[x%i] %s' % (eps, img_height, name) )
+#    os.system('convert -format gif %s[x%i] %s' % (eps, img_height, name) )
+    os.system('convert -format gif -antialias %s[x%i] %s' % (eps, img_height, name) )
     if not quiet:
         print '  Created %s' % name
     return name
@@ -586,7 +589,8 @@ def convert_eps_to_gif(eps):
 def convert_eps_to_thumb_gif(eps):
     assert eps.endswith('.eps')
     name = eps[:-3] + 'thumb.gif'
-    os.system('convert -resize x%i -antialias -colors 64 -format gif %s %s' % (thumb_height, eps, name) )
+#    os.system('convert -resize x%i -antialias -colors 64 -format gif %s %s' % (thumb_height, eps, name) )
+    os.system('convert -format gif -antialias %s[x%i] %s' % (eps, thumb_height, name) )
     if not quiet:
         print '  Created %s' % name
     return name
