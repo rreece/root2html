@@ -289,7 +289,9 @@ class HighSlideRootFileIndex(file):
                 if issubclass(obj.__class__, ROOT.TH1) or issubclass(obj.__class__, ROOT.TH1):
                     new_obj = ROOT.TCanvas(obj.GetName(), obj.GetTitle(), 500, 500)
                     new_obj.cd()
-                    obj.Draw()
+                    obj.SetLineColor(ROOT.kRed-3)
+                    obj.SetMarkerColor(ROOT.kRed-3)
+                    obj.Draw('PE')
                     obj = new_obj
 
                 # Put TCanvas on html
@@ -430,7 +432,7 @@ def get_object_stats(h):
         under       = h.GetBinContent(0)
         over        = h.GetBinContent(nbins+1)
         stats['entries'] = '%i'   % round(entries)
-        stats['int']     = ('%i' % round(integral)) if integral > 10 else ('%.2g' % integral)
+        stats['int']     = ('%i' % round(integral)) if integral >= 100 else ('%.3g' % integral)
         stats['err']     = '%.2g' % err
         stats['mean']    = '%.3g' % mean
         stats['rms']     = '%.3g' % rms
@@ -450,7 +452,7 @@ def get_object_stats(h):
         mean_y      = h.GetMean(2)
         rms_y       = h.GetRMS(2)
         stats['entries'] = '%i'   % round(entries)
-        stats['int']     = ('%i' % round(integral)) if integral > 10 else ('%.2g' % integral)
+        stats['int']     = ('%i' % round(integral)) if integral >= 100 else ('%.3g' % integral)
         stats['err']     = '%.2g' % err
         stats['mean_x']  = '%.3g' % mean_x
         stats['rms_x']   = '%.3g' % rms_x
