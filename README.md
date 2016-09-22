@@ -40,6 +40,18 @@ requirement is that you download the highslide javascript library at
 point to the path: highslide-(version)/highslide (see the `root2html.py` file).
 
 
+Options
+----------------------------------
+
+    -h, --help
+        Prints this manual and exits.
+    -p PATTERN, --pattern=PATTERN
+        Regex pattern for filtering the TCanvas paths processed.  The pattern
+        is matched against the full paths of the TCanvases in the root file.
+    -j PATH, --highslide=PATH
+        Overrides the default path to highslide.
+
+
 License
 ----------------------------------
 
