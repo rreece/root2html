@@ -69,10 +69,13 @@ except:
     print 'Could not import rootlogon'
 ROOT.gErrorIgnoreLevel = 1001
 
+path_of_this_file = os.path.abspath( __file__ )
+dir_of_this_file = os.path.dirname(os.path.abspath( __file__ ))
+
 #------------------------------------------------------------------------------
 
 ## global options
-highslide_path = '../../highslide-4.1.9/highslide'
+highslide_path = os.path.join(dir_of_this_file, 'highslide-4.1.9/highslide')
 img_format = 'gif' # gif or png
 img_height = 450 # pixels
 thumb_height = 120 # pixels
