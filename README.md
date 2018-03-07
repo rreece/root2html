@@ -9,11 +9,16 @@ authors:
 -   Tae Min Hong <tae.min.hong@cern.ch>
 -   Alex Tuna <tuna@cern.ch>
 
-created: February 16, 2011
+Created: February 16, 2011
 
 
 Description
 ----------------------------------
+
+This is a tool for visualizing many variables in multi-dimensional data.
+It is a script that generates clickable-expandable html and images from a
+[ROOT](https://root.cern.ch/) file of TCanvases for visualizing plots.
+An [example of its output is here](http://rreece.github.io/sw/plots/HighMassHtautau2012.2015-10-05-06h00.3lep1tau/).
 
 root2html is a script for generating an html page for displaying plots.
 root2html expects you to pass a root file, filled with TCanvases,
